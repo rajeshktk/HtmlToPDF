@@ -1,0 +1,1181 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html class="bg-stripped animated fadeIn" dir=ltr>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "6387e82dbf", "applicationID": "3081130", "transactionName": "IV9dR0RcDghRRk4AEBEfQFtZRA==", "queueTime": 0, "applicationTime": 484, "agentToken": null, "agent": "", "ttGuid": "6e734fc2fa99b82d" }</script>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) { function r(n) { if (!t[n]) { var o = t[n] = { exports: {} }; e[n][0].call(o.exports, function (t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports) } return t[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++) r(n[o]); return r }({ 1: [function (e, t, n) { function r() { } function o(e, t, n) { return function () { return i(e, [(new Date).getTime()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this } } var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = NREUM; "undefined" == typeof window.newrelic && (newrelic = f); var s = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit"], l = "api-", p = l + "ixn-"; a(s, function (e, t) { f[t] = o(l + t, !0, "api") }), f.addPageAction = o(l + "addPageAction", !0), f.setCurrentRouteName = o(l + "routeName", !0), t.exports = newrelic, f.interaction = function () { return (new r).get() }; var d = r.prototype = { createTracer: function (e, t) { var n = {}, r = this, o = "function" == typeof t; return i(p + "tracer", [Date.now(), e, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [Date.now(), r, o], n), o) try { return t.apply(this, arguments) } finally { c.emit("fn-end", [Date.now()], n) } } } }; a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) { d[t] = o(p + t) }), newrelic.noticeError = function (e) { "string" == typeof e && (e = new Error(e)), i("err", [e, (new Date).getTime()]) } }, {}], 2: [function (e, t, n) { function r(e, t) { var n = [], r = "", i = 0; for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], 3: [function (e, t, n) { function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o) ; ++r < o;) i[r] = e[t + r]; return i } t.exports = r }, {}], ee: [function (e, t, n) { function r() { } function o(e) { function t(e) { return e && e instanceof r ? e : e ? c(e, u, i) : i() } function n(n, r, o) { if (!p.aborted) { e && e(n, r, o); for (var i = t(o), a = v(n), u = a.length, c = 0; c < u; c++) a[c].apply(i, r); var f = s[w[n]]; return f && f.push([y, n, r, i]), i } } function d(e, t) { b[e] = v(e).concat(t) } function v(e) { return b[e] || [] } function g(e) { return l[e] = l[e] || o(n) } function m(e, t) { f(e, function (e, n) { t = t || "feature", w[n] = t, t in s || (s[t] = []) }) } var b = {}, w = {}, y = { on: d, emit: n, get: g, listeners: v, context: t, buffer: m, abort: a, aborted: !1 }; return y } function i() { return new r } function a() { (s.api || s.feature) && (p.aborted = !0, s = p.backlog = {}) } var u = "nr@context", c = e("gos"), f = e(2), s = {}, l = {}, p = t.exports = o(); p.backlog = s }, {}], gos: [function (e, t, n) { function r(e, t, n) { if (o.call(e, t)) return e[t]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return e[t] = r, r } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], handle: [function (e, t, n) { function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) } var o = e("ee").get("handle"); t.exports = r, r.ee = o }, {}], id: [function (e, t, n) { function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () { return o++ }) } var o = 1, i = "nr@id", a = e("gos"); t.exports = r }, {}], loader: [function (e, t, n) { function r() { if (!h++) { var e = y.info = NREUM.info, t = l.getElementsByTagName("script")[0]; if (setTimeout(f.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return f.abort(); c(b, function (t, n) { e[t] || (e[t] = n) }), u("mark", ["onload", a()], null, "api"); var n = l.createElement("script"); n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t) } } function o() { "complete" === l.readyState && i() } function i() { u("mark", ["domContent", a()], null, "api") } function a() { return (new Date).getTime() } var u = e("handle"), c = e(2), f = e("ee"), s = window, l = s.document, p = "addEventListener", d = "attachEvent", v = s.XMLHttpRequest, g = v && v.prototype; NREUM.o = { ST: setTimeout, CT: clearTimeout, XHR: v, REQ: s.Request, EV: s.Event, PR: s.Promise, MO: s.MutationObserver }, e(1); var m = "" + location, b = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-998.min.js" }, w = v && g && g[p] && !/CriOS/.test(navigator.userAgent), y = t.exports = { offset: a(), origin: m, features: {}, xhrWrappable: w }; l[p] ? (l[p]("DOMContentLoaded", i, !1), s[p]("load", r, !1)) : (l[d]("onreadystatechange", o), s[d]("onload", r)), u("mark", ["firstbyte", a()], null, "api"); var h = 0 }, {}] }, {}, ["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Rajesh T.K. - Sr. Technical Lead - VisualCV</title>
+    <base href="https://www.visualcv.com/app/">
+
+    <meta name="description" content="">
+    <meta name="author" content="VisualCV.com">
+    <meta name="robots" content="noarchive">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <script src="js/vendor/es5-shim.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="image" content="https://www.visualcv.com/images/visualcv-resume-templates.jpg">
+
+ 
+
+   
+ 
+
+    <link rel="stylesheet" type="text/css" href="visualcv.css" />
+</head>
+<body data-cv-id="1355627" class="cv-viewer">
+
+    <header class="row centered vcv-header">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6 text-right">
+
+        </div>
+    </header>
+
+    <style type="text/css">
+        @@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:700,300|Roboto:300,700&subset=latin,latin-ext,cyrillic);
+
+        .css-crop {
+            width: 100%;
+            height: 0;
+            padding-bottom: 50%;
+            background-repeat: no-repeat;
+        }
+
+            .css-crop.bg-cover {
+                background-size: cover;
+                /*-ms-behavior: url("/styles/backgroundsize.min.htc"); doesn't work on IE8-9...*/
+                background-position: center;
+            }
+
+            .css-crop.bg-contain {
+                background-size: contain;
+                background-position: center;
+            }
+
+        .clear-margin {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .half-width {
+            width: 50%;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block !important;
+        }
+
+        .nomargin {
+            margin: 0px !important;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .centered {
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .first {
+            margin-top: 0px !important;
+        }
+
+        .last {
+            margin-bottom: 0px !important;
+        }
+
+        .ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+        }
+
+        .mejs-overlay-button {
+            display: none;
+        }
+
+        [data-id=new] [data-field=title] {
+            display: none;
+        }
+
+        .cv-viewer p {
+            min-height: 1em;
+        }
+
+        .cv-viewer .vcv-header {
+            margin: 30px auto;
+            max-width: 1020px;
+            position: relative;
+        }
+
+            .cv-viewer .vcv-header #social-share {
+                text-align: right;
+                position: absolute;
+                left: -80px;
+                top: 80px;
+                z-index: 1050;
+                opacity: 0;
+            }
+
+                .cv-viewer .vcv-header #social-share .share-button {
+                    min-height: 30px;
+                }
+
+                    .cv-viewer .vcv-header #social-share .share-button.subtle {
+                        opacity: 0.75;
+                    }
+
+            .cv-viewer .vcv-header .banner-top {
+                padding-left: 90px;
+                position: relative;
+                margin-top: -10px;
+                margin-bottom: -30px;
+                z-index: 0;
+                opacity: 0.5;
+                display: inline-block;
+            }
+
+                .cv-viewer .vcv-header .banner-top:hover {
+                    opacity: 0.8;
+                    -webkit-transition-property: transform opacity;
+                    -moz-transition-property: transform opacity;
+                    transition-property: transform opacity;
+                    -webkit-transition-duration: 0.5s;
+                    -moz-transition-duration: 0.5s;
+                    transition-duration: 0.5s;
+                }
+
+        .cv-viewer .vcv-logo {
+            height: 40px;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .cv-viewer .cv-container article .empty {
+            display: none !important;
+        }
+
+        .cv-viewer footer.vcv-footer {
+            margin-top: 100px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .cv-viewer footer .powered-by {
+            margin-top: 0px;
+        }
+
+        .cv-viewer footer .updated-at {
+            opacity: 0.3;
+        }
+
+        .cv-fullscreen {
+            position: relative;
+        }
+
+            .cv-fullscreen .powered-by a {
+                color: white;
+            }
+
+            .cv-fullscreen .vcv-header {
+                display: none;
+            }
+
+            .cv-fullscreen .vcv-footer {
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                color: white;
+                margin-top: 50px;
+            }
+
+                .cv-fullscreen .vcv-footer .updated-at {
+                    display: block;
+                    margin-bottom: 1em;
+                    opacity: 0.75;
+                }
+
+        .editor-visible {
+            display: none;
+        }
+
+        .cv-editor .cv-container {
+            margin: 0px auto 100px auto;
+        }
+
+            .cv-editor .cv-container .editor-visible {
+                display: block;
+            }
+
+        .cv-container,
+        .cv-content {
+            opacity: 1 !important;
+        }
+
+        .cv-container {
+            display: block;
+            margin: 0px auto 10px auto;
+            min-height: 500px;
+            padding: 50px 6.5%;
+            max-width: 1020px;
+            background: white;
+            border-radius: 1px;
+            z-index: 10;
+            -webkit-box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+
+            .cv-container .nowrap-list li {
+                white-space: nowrap;
+            }
+
+            .cv-container section {
+                position: relative;
+                word-wrap: break-word;
+            }
+
+            .cv-container article:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .cv-container .main section:first-child .edit-section .fa-arrow-up,
+            .cv-container .cv-content section:first-child .edit-section .fa-arrow-up {
+                display: none;
+            }
+
+            .cv-container .main section:last-of-type .edit-section .fa-arrow-down,
+            .cv-container .cv-content section:last-of-type .edit-section .fa-arrow-down {
+                display: none;
+            }
+
+            .cv-container #profile .edit-section {
+                display: none;
+            }
+
+            .cv-container #references .date-range {
+                display: none !important;
+            }
+
+            .cv-container #references .article-body {
+                width: 100%;
+            }
+
+            .cv-container svg {
+                overflow: visible;
+            }
+
+            .cv-container table {
+                width: 100%;
+            }
+
+            .cv-container .morris-hover {
+                display: none !important;
+            }
+
+            .cv-container input[type=month] {
+                position: relative;
+                border: none;
+                max-width: 100%;
+                content: attr(placeholder);
+                display: inline-block;
+            }
+
+                .cv-container input[type=month]:before {
+                    content: attr(placeholder);
+                    position: absolute;
+                }
+
+            .cv-container .gallery .asset-thumb {
+                display: block;
+            }
+
+            .cv-container .asset label.empty {
+                display: block !important;
+            }
+
+            .cv-container .btn {
+                margin-bottom: 15px;
+            }
+
+                .cv-container .btn i.subtle {
+                    opacity: 0.2;
+                }
+
+                .cv-container .btn i {
+                    opacity: 0.5;
+                }
+
+                .cv-container .btn.btn-glass {
+                    background-color: rgba(255, 255, 255, 0.15);
+                    -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+                    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+            .cv-container a[href] {
+                color: #428bca;
+            }
+
+                .cv-container a[href] [data-bind=organization] {
+                    color: #428bca;
+                }
+
+            .cv-container [data-bind=end_date]:before {
+                content: ' - ';
+            }
+
+            .cv-container .add-section {
+                max-width: 850px;
+                margin: 0px auto;
+            }
+
+            .cv-container .cv-content:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .cv-container .cv-content .user-thumb {
+                display: none;
+            }
+
+                .cv-container .cv-content .user-thumb.visible {
+                    display: inherit;
+                }
+
+            .cv-container .asset-thumb {
+                position: relative;
+                cursor: pointer;
+                display: block;
+            }
+
+                .cv-container .asset-thumb .asset-overlay {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 15%;
+                    z-index: 100;
+                    opacity: 0.5;
+                }
+
+                    .cv-container .asset-thumb .asset-overlay:hover {
+                        opacity: 0.75;
+                    }
+
+                    .cv-container .asset-thumb .asset-overlay.youtube {
+                        background-image: url("/images/icons/play.png");
+                    }
+
+                    .cv-container .asset-thumb .asset-overlay img {
+                        page-break-inside: avoid;
+                    }
+
+            .cv-container .asset label.ellipsis > span {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+            }
+
+        @@media (max-width: 992px) {
+            #social-share {
+                display: none;
+            }
+
+            .vcv-header a {
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .vcv-header .vcv-logo {
+                display: inline;
+            }
+
+            .vcv-header .btn {
+                width: 100%;
+            }
+        }
+
+        .pdf .cv-container .chart-container {
+            width: 850px;
+        }
+
+        .pdf .cv-container .cv-content {
+            padding: 0px;
+        }
+
+        .pdf .cv-container .portfolio .css-crop {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .pdf .cv-container .user-thumb {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .pdf body,
+        .embed body {
+            background: white !important;
+        }
+
+        .pdf .container,
+        .embed .container {
+            padding: 0px;
+            margin: 0px auto;
+            width: 100%;
+        }
+
+        .pdf .cv-container,
+        .embed .cv-container {
+            padding: 0px !important;
+            margin-bottom: 0px !important;
+            max-width: 100% !important;
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+            .pdf .cv-container section:last-of-type,
+            .embed .cv-container section:last-of-type,
+            .pdf .cv-container section:last-of-type article:last-of-type,
+            .embed .cv-container section:last-of-type article:last-of-type,
+            .pdf .cv-container section:last-of-type article:last-of-type,
+            .embed .cv-container section:last-of-type article:last-of-type,
+            .pdf .cv-container p:last-of-type,
+            .embed .cv-container p:last-of-type,
+            .pdf .cv-container .content-container,
+            .embed .cv-container .content-container,
+            .pdf .cv-container .cv-content,
+            .embed .cv-container .cv-content {
+                margin-bottom: 0px !important;
+                padding-bottom: 0px !important;
+            }
+
+        .pdf .vcv-header,
+        .embed .vcv-header,
+        .pdf .vcv-footer,
+        .embed .vcv-footer {
+            display: none;
+        }
+
+        .pdf header,
+        .embed header,
+        .pdf .header-text,
+        .embed .header-text {
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        .pdf .no-page-break,
+        .embed .no-page-break,
+        .pdf .css-crop,
+        .embed .css-crop,
+        .pdf pre,
+        .embed pre,
+        .pdf blockquote,
+        .embed blockquote,
+        .pdf img,
+        .embed img,
+        .pdf svg,
+        .embed svg,
+        .pdf .chart-graph,
+        .embed .chart-graph,
+        .pdf .chart-container,
+        .embed .chart-container,
+        .pdf .asset,
+        .embed .asset {
+            page-break-inside: avoid;
+        }
+
+            .pdf .no-page-break p,
+            .embed .no-page-break p {
+                page-break-inside: avoid;
+            }
+
+        .pdf thead,
+        .embed thead {
+            display: table-header-group;
+        }
+
+        .pdf p,
+        .embed p {
+            orphans: 4;
+            widows: 4;
+        }
+
+        @@page {
+            size: A4 portrait;
+        }
+
+        .cv-container {
+            font-family: "Roboto", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, 华文细黑, STXihei, 黑体, SimHei, sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            background: white;
+            padding: 0px;
+        }
+
+            .cv-container .cv-content {
+                padding: 3em 0px;
+                margin: 0px;
+                position: relative;
+            }
+
+                .cv-container .cv-content:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 33%;
+                    height: 100%;
+                    background: #425370;
+                }
+
+            .cv-container h2,
+            .cv-container h3,
+            .cv-container h4,
+            .cv-container h5,
+            .cv-container h6,
+            .cv-container label {
+                margin-top: 0px;
+                margin-bottom: 0.2em;
+                font-weight: 300;
+            }
+
+            .cv-container h5 {
+                margin: 0 0 0.2em;
+            }
+
+            .cv-container h1,
+            .cv-container h3 {
+                font-family: "Roboto Condensed", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, 华文细黑, STXihei, 黑体, SimHei, sans-serif;
+            }
+
+            .cv-container h1 {
+                font-size: 225%;
+                margin: 0px;
+                line-height: 1em;
+                text-transform: uppercase;
+                font-weight: 200;
+                color: white;
+                text-align: center;
+                margin-bottom: 0.25em;
+            }
+
+            .cv-container h2 {
+                font-size: 150%;
+                font-style: italic;
+                text-align: center;
+            }
+
+            .cv-container h3 {
+                font-weight: 700;
+                font-size: 150%;
+            }
+
+            .cv-container h4,
+            .cv-container h5 {
+                font-weight: 400;
+                font-size: 125%;
+            }
+
+            .cv-container h5 {
+                color: #555555;
+            }
+
+            .cv-container h6 {
+                font-size: 125%;
+                color: #555555;
+            }
+
+            .cv-container strong {
+                font-weight: 700;
+            }
+
+            .cv-container section {
+                clear: both;
+                margin-bottom: 2.5em;
+            }
+
+                .cv-container section header {
+                    width: 100%;
+                    margin-bottom: 2.25em;
+                    text-align: left;
+                }
+
+                    .cv-container section header .header-text {
+                        padding: 0px 0.5em 0px 0px;
+                        background: white;
+                        text-align: center;
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin: 0em 2px 0px 0px;
+                        z-index: 2;
+                        position: relative;
+                    }
+
+                    .cv-container section header:after {
+                        content: '';
+                        display: block;
+                        top: 1em;
+                        border-bottom: 1px solid #dedede;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        z-index: 0;
+                    }
+
+            .cv-container .sidebar,
+            .cv-container .main {
+                float: left;
+            }
+
+            .cv-container .main {
+                width: 67%;
+            }
+
+            .cv-container .sidebar {
+                padding: 0% 3%;
+                width: 33%;
+                color: white;
+                z-index: 1;
+            }
+
+                .cv-container .sidebar .header-text {
+                    background-color: #425370;
+                }
+
+                .cv-container .sidebar article a {
+                    color: white;
+                }
+
+                .cv-container .sidebar .user-contact li,
+                .cv-container .sidebar .user-links li {
+                    margin-bottom: 0.75em;
+                }
+
+                .cv-container .sidebar .user-title {
+                    padding: 15px 0px;
+                }
+
+                .cv-container .sidebar .user-thumb {
+                    max-width: 50%;
+                    margin: 0px auto;
+                    border: 1px solid white;
+                    padding: 4px;
+                    border-radius: 100%;
+                    margin-top: 1px;
+                }
+
+                    .cv-container .sidebar .user-thumb .css-crop {
+                        padding-bottom: 100%;
+                        border-radius: 100%;
+                    }
+
+                .cv-container .sidebar article.contact_info {
+                    margin-bottom: 2em;
+                }
+
+                .cv-container .sidebar .margin-top {
+                    margin-top: 1.5em;
+                }
+
+                .cv-container .sidebar .contact-field {
+                    margin-bottom: 1em;
+                }
+
+                    .cv-container .sidebar .contact-field h4 {
+                        margin-bottom: 0px;
+                    }
+
+                .cv-container .sidebar .competency h6 {
+                    color: white;
+                }
+
+                .cv-container .sidebar .competency .competency-list {
+                    padding: initial;
+                }
+
+                    .cv-container .sidebar .competency .competency-list li {
+                        opacity: 0.2;
+                        background-color: white;
+                    }
+
+                        .cv-container .sidebar .competency .competency-list li.filled {
+                            opacity: 1;
+                        }
+
+            .cv-container .vcard ul.user-contact li:before {
+                font-family: FontAwesome;
+                display: inline-block;
+                width: 1em;
+                margin-right: 0.25em;
+            }
+
+            .cv-container .vcard li.adr:before {
+                content: "\f041";
+            }
+
+            .cv-container .vcard li.phone:before {
+                content: "\f095";
+            }
+
+            .cv-container .vcard li.email:before {
+                content: "\f003";
+            }
+
+            .cv-container .main {
+                padding: 2em 3%;
+                padding-top: 0px;
+            }
+
+                .cv-container .main h3 {
+                    color: #555555;
+                }
+
+                .cv-container .main .header-text {
+                    background-color: white;
+                }
+
+            .cv-container #summary header {
+                text-align: center;
+            }
+
+                .cv-container #summary header .header-text {
+                    padding: 0px 0.5em;
+                }
+
+            .cv-container #summary article {
+                margin-top: 0px;
+                text-align: center;
+                padding: 0em 1.5em;
+                font-size: 115%;
+                font-weight: 200;
+            }
+
+            .cv-container article {
+                clear: both;
+                margin-bottom: 1.25em;
+            }
+
+            .cv-container .dated_story .article-headings {
+                float: left;
+                width: 18%;
+                margin-right: 1%;
+            }
+
+            .cv-container .dated_story .article-body {
+                float: left;
+                width: 81%;
+            }
+
+            .cv-container .dated_story#references .article-headings {
+                display: none;
+            }
+
+            .cv-container .dated_story#references .article-body {
+                width: 100%;
+            }
+
+            .cv-container .competency-list {
+                list-style: none;
+                width: 100%;
+                padding-left: 0.25em;
+            }
+
+                .cv-container .competency-list li {
+                    height: 1em;
+                    width: 8%;
+                    margin-right: 2%;
+                    background-color: #cccccc;
+                    -webkit-transform: skewX(-30deg);
+                    -ms-transform: skewX(-30deg);
+                    -moz-transform-origin: skewX(-30deg);
+                    -o-transform-origin: skewX(-30deg);
+                    transform: skewX(-30deg);
+                    display: inline-block;
+                }
+
+                    .cv-container .competency-list li.filled {
+                        background-color: #425370;
+                    }
+
+            .cv-container .portfolio .row {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+
+            .cv-container .portfolio .col-sm-4 {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .cv-container .portfolio .asset .asset-description {
+                display: none;
+            }
+
+            .cv-container .portfolio label {
+                font-weight: 700;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                min-height: 1.5em;
+            }
+
+            .cv-container .portfolio .css-crop {
+                width: 100%;
+                padding-bottom: 75%;
+                background-size: cover;
+                background-position: center center;
+                border: 1px solid #425370;
+                -webkit-box-shadow: 1px 1px 3px 0px #cccccc;
+                box-shadow: 1px 1px 3px 0px #cccccc;
+            }
+
+            .cv-container .portfolio a label {
+                cursor: pointer;
+            }
+
+            .cv-container .sidebar .portfolio .asset {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .cv-container .sidebar .portfolio .css-crop {
+                border: 0px;
+                padding: 0px;
+                height: auto;
+                background-image: none !important;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+                .cv-container .sidebar .portfolio .css-crop img {
+                    display: block !important;
+                }
+
+        @@media (min-width: 768px) {
+            .cv-container .sidebar .portfolio label {
+                text-align: left;
+            }
+
+            .cv-container .sidebar .portfolio .asset,
+            .cv-container .sidebar .portfolio .asset-thumb {
+                width: 100%;
+            }
+
+            .cv-container .sidebar .portfolio .asset-description {
+                display: block;
+            }
+        }
+
+        .cv-container .portfolio label {
+            font-weight: initial;
+        }
+
+        .cv-container .portfolio .css-crop {
+            width: 100%;
+            padding-bottom: 75%;
+            border: 2px solid #425370;
+            border-radius: 2em 0px 2em 0px;
+            box-shadow: 1px 1px 3px 0px #dedede;
+        }
+
+        .cv-container .edit-new {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .cv-container .sidebar .add-section a.btn {
+            color: white;
+        }
+
+        @@media (max-width: 768px) {
+            .cv-container .cv-content {
+                padding: 0px 0px 3em 0px;
+            }
+
+                .cv-container .cv-content:before {
+                    content: none;
+                }
+
+            .cv-container #summary article {
+                padding: 0px;
+            }
+
+            .cv-container .main {
+                padding: 2em 5% !important;
+                width: 100%;
+                display: block;
+            }
+
+            .cv-container .sidebar {
+                padding: 3em 5% !important;
+                background-color: #425370;
+                float: none;
+                width: 100% !important;
+            }
+
+            .cv-container article .article-headings,
+            .cv-container article .article-body {
+                width: 100% !important;
+            }
+        }
+
+        .pdf body > .container {
+            padding: 0px;
+        }
+
+        .pdf .cv-container {
+            margin: 0px;
+        }
+
+            .pdf .cv-container .cv-content {
+                padding-top: 1px;
+            }
+
+            .pdf .cv-container .header-text:after {
+                padding-right: 0em;
+                content: " \00a0";
+            }
+
+            .pdf .cv-container .chart-container {
+                width: 600px !important;
+            }
+
+        @@page {
+            margin: 1.2cm;
+        }
+
+        @@page :first {
+            margin-top: 0cm;
+        }
+    </style><div>
+        <link rel="stylesheet" type="text/css" href="https://www.visualcv.com/less/avant?%40primary=%23425370&amp;%40body-font-size=15px&amp;%40section-margins=2.5em&amp;%40article-margins=1.25em" /><div class="cv-container animated fadeIn ">
+            <div class="cv-content">
+                <div class="sidebar">
+                    <section id="profile" class="profile">
+                        <article class="vcard" data-bind="content">
+                            <div class="user-thumb" data-bind="thumb"><div class="css-crop bg-cover" style="background-image:url(null);"></div></div><div class="fn user-title">
+                                <h1 class="full-name" data-bind="full_name">
+                                    <span class="undefined needsclick" contenteditable="false" data-placeholder="Full Name">Rajesh T.K.</span>
+                                </h1><h2 class="title" data-bind="headline">
+                                    <span class="undefined needsclick" contenteditable="false" data-placeholder="Headline / Current Title">Sr. Technical Lead</span>
+                                </h2>
+                            </div><ul class="user-contact">
+                                <li class="adr locality" data-bind="location">
+
+                                    <span class="undefined needsclick" contenteditable="false" data-placeholder="Location">Bangalore, Karnataka,  INDIA</span>
+                                </li>
+                                <li class="phone" data-bind="phone"><span class="undefined needsclick" contenteditable="false" data-placeholder="Phone">+919342460918</span></li>
+                                <li class="email" data-bind="email"><a href="mailto:rajesh.k.tk@gmail.com">rajesh.k.tk@gmail.com</a></li>
+                            </ul><ul class="user-links user-websites" data-bind="websites"></ul>
+                        </article>
+                    </section><section data-bind="sidebar_sections" id="text_story" class="text_story">
+                        <header><h3 class="header-text" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Text Section">Skills</span></h3></header><article data-bind="content">
+                            <div id="react-tinymce-845605" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                <p><strong>Operating System:</strong>&nbsp; Windows 2008 Server.</p>
+                                <p><strong>Database:</strong>&nbsp;MS-SQL Server 2008(R2)-10,Elastic Server 2.3.(No Sql).</p>
+                                <p><strong>Languages &amp; Tools:</strong>&nbsp;Web-API,WCF,MVC 4,Asp.Net 2.0, C#.Net 4.0,4.5,Ajax, ADO.Net, XML, JSON, JQuery,AngularJS, BootStrap, MS Test,N Unit, Javascript, Elastic Search 2.3.2, Load UI,VS 2010-2012,Skelta Workflow.Net 2009/2011(Skelta BPM.Net), Sharepoint 2007,SDL Tridion.</p>
+                                <p><strong>Configuration Management:&nbsp;</strong>Visual Source Safe 8.0, SVN, Visual Studio Team Foundation 2008,Github.</p>
+                            </div>
+                        </article>
+                    </section><div data-bind="add-sidebar-section-btn"><span class="undefined needsclick" contenteditable="false" data-placeholder="add-sidebar-section-btn"></span></div>
+                </div><div class="main">
+                    <section data-bind="sections" id="summary" class="text_story">
+                        <header><h3 class="header-text" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Summary">Summary</span></h3></header><article data-bind="content">
+                            <div id="react-tinymce-845606" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                <ul>
+                                    <li style="text-align: left;">Nearly<strong>10 years&nbsp;</strong>of strong experience in software development using Object Oriented Programming (OOPs).</li>
+                                    <li style="text-align: left;">Proficient level key skills&nbsp;<strong>in NET3.5,4.0,4.5, MS-SQL SERVER 2008-2010, C#, VB.NET,HTML.</strong></li>
+                                    <li style="text-align: left;"><strong>Capable of communicating&nbsp;</strong>with technical, business and end user stakeholders and design information architecture to solve problems.</li>
+                                    <li style="text-align: left;">Familiar with Agile software development methodology-<strong>Scrum Methodology</strong>.</li>
+                                    <li style="text-align: left;">Knowledge of .NET Framework&nbsp;<strong>5, 4.0,4.5</strong></li>
+                                    <li style="text-align: left;">Good knowledge of&nbsp;<strong>MVC, WCF, Entity Data Framework, JQuery, JSON, JavaScript</strong>.</li>
+                                    <li style="text-align: left;">Excellent working experience on&nbsp;<strong>n-Tier&nbsp;</strong>and layered architecture (Presentation, Business logic and Data Layer), Service Oriented Apps and&nbsp;<strong>MVC.</strong></li>
+                                    <li style="text-align: left;">Hands on experience of Designed Pattern.</li>
+                                    <li style="text-align: left;">Well versed with&nbsp;<strong>REST,</strong><strong>SOLID&nbsp;</strong>and<strong>&nbsp;IOC principles.</strong></li>
+                                    <li style="text-align: left;">Proficient with Web Applications and Business Process Management tools (Skelta&nbsp;<strong>BPM</strong>.Net).</li>
+                                    <li style="text-align: left;">Experienced and versatile technologist able to take on a variety of technology like:&nbsp;<strong>Dotnetnuke,</strong><strong>SDL Tridion,SharePoint (wss 3.0).</strong></li>
+                                    <li style="text-align: left;">Over a year of experience as a full-stack developer.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </section><section data-bind="sections" id="positions" class="dated_story">
+                        <header><h3 class="header-text empty" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Work History">Work History</span></h3></header><article data-bind="contents">
+                            <div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2015-01</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">till date</span></span></h6></div><div class="article-body">
+                                <h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="job title">Sr. Technical Lead.</span></h4><a data-bind="organization_url" target="_blank" rel="nofollow" href="http://Bangalore, Karanataka"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="organization">HCL Technologies Limited (http://www.hcl.com/)</span></h5></a><div id="react-tinymce-845607" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                    <p><strong>Application<span>: </span></strong>Address Service API(Tesco)</p>
+                                    <p><strong>Description:</strong></p>
+                                    <p>The purpose of Address Service API is to serve as sole master repository for all UK addresses.&nbsp;</p>
+                                    <p>Address are provided my ROYAL MAIL in form of flat file (CSV), which is processed based on the instructions in PAF document (document from Royal Mail to understand the format of Files) and imported to AddressDB on Monthly basis(on-demand) and Daily basis(scheduled).&nbsp;</p>
+                                    <p>Address Service API exposes the operations using REST principles, which can be consumed by various clients using http protocol. The resource (response) is sent either in XML or JSON format depending on the request Headers. The APIs are documented and demonstrated using swagger.&nbsp;</p>
+                                    <p><strong>Tools Used:</strong>&nbsp;</p>
+                                    <p>Web-API, C#.net 4.5, ADO.net, Microsoft Unity Block (for IOC), Angular JS, SQL 2008-R2,N Unit (for UNIT Testing), GitHub, Jenkins, Sonar, JIRA, Elastic Search (Version 2.3.2), Application Request Routing(ARR 3).<strong>&nbsp;</strong></p>
+                                    <p><strong>Role:</strong><strong>&nbsp;</strong></p>
+                                    <ul>
+                                        <li>Adhering to the Agile (SCRUM) process followed in the organization.</li>
+                                        <li>Implementing the new changes from Product Backlog.</li>
+                                        <li>Development and writing unit test case using N unit.</li>
+                                        <li>Performance Tuning of the existing code and store procedures.</li>
+                                        <li>Mentoring the juniors to achieve their respective tasks.</li>
+                                        <li>Involved with the build team to get ready the CICD pipeline.</li>
+                                        <li>Redevelop the existing project to use elastic search.</li>
+                                    </ul>
+                                    <p>&nbsp;</p>
+                                    <p><strong>Position:</strong> Technical Lead</p>
+                                    <p><strong>Duration</strong><strong>:</strong> Aug-2015 &ndash;Till Date.</p>
+                                    <p><strong>Application<span>: </span></strong>Direct Import Tool(True Value)</p>
+                                    <p><strong>Description:</strong></p>
+                                    <p>The objective of the DI tool is to partially automate the renewed direct import process. It will predominantly be a front end ordering and order management system for retailers (members), with supporting functionalities which include calendar management, catalog management, pricing, order tracking, archiving &amp; reporting. The tool will be used by retailers (members) and selected associates (administrators).&nbsp;</p>
+                                    <p>The DI tool will interface with AOL and MOL for user credentials and the access the user will have is partially dependent on the access rights they have in AOL or MOL. The DI tool will also be capable of interfacing with a PIM system (yet to be built), in order to receive direct product information from the system.</p>
+                                    <p>&nbsp;</p>
+                                    <p><strong>Tools Used:</strong></p>
+                                    <p>&nbsp;MVC 4, WCF, C#.net 4.5, Entity data framework 6, Windsor Castle (for IOC), Bootstrap, JQuery, T4 Templates SQL 2008.<strong>&nbsp;</strong></p>
+                                    <p><strong>Role:</strong><strong>&nbsp;</strong></p>
+                                    <ul>
+                                        <li>Writing code for to implement the business functionality referring the BRD and wireframes prepared by BA</li>
+                                        <li>Wrote tool to auto generate c# code</li>
+                                        <li>Mentor juniors to get their work completed.</li>
+                                        <li>Bug fixing.</li>
+                                    </ul>
+                                    <p>&nbsp;</p>
+                                    <p><strong>Position:</strong> Technical Lead</p>
+                                    <p><strong>Duration</strong><strong>:</strong> Mar-2015 &ndash;July-2015.</p>
+                                </div>
+                            </div>
+                        </article><article data-bind="contents">
+                            <div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2012-03</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2014-12</span></span></h6></div><div class="article-body">
+                                <h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="job title">Sr. Associate</span></h4><a data-bind="organization_url" target="_blank" rel="nofollow" href="http://Bangalore, Karnataka"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="organization">Sapient Nitro (http://www.sapientnitro.com/)</span></h5></a><div id="react-tinymce-845608" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                    <p><strong>Applications/Projects</strong>:&nbsp;Tesco API,Fisher-price (<a href="http://www.fisher-price.com" target="_blank" rel="nofollow">www.fisher-price.com</a>)</p>
+                                    <p>Worked as Sr. Associate where the primary roles and responsibilities included:</p>
+                                    <ul>
+                                        <li>Create and document software tools (Contracts) required by artists or other developers.</li>
+                                        <li>Coordinate with the Technical Director on current programming tasks.</li>
+                                        <li>Collaborate with other programmers to design and implement features.</li>
+                                        <li>Writing code for the provider implementation on top of existing frame work code.</li>
+                                        <li>Writing Unit tests cases for code coverage of 80% using visual studio.</li>
+                                        <li>Bug fixing.</li>
+                                        <li>Load testing using Soap UI.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article><article data-bind="contents">
+                            <div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2010-11</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2012-02</span></span></h6></div><div class="article-body">
+                                <h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="job title">Analyst</span></h4><a data-bind="organization_url" target="_blank" rel="nofollow" href="http://Bangalore, Karnataka"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="organization">Invensys Skelta (http://www.skelta.com)</span></h5></a><div id="react-tinymce-845609" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                    <p>Application/Projects:Invensys Off-boarding System,Uflex Complaint Management system,Deutsche Post Bank (EPOC).</p>
+                                    <p>Tools used:</p>
+                                    <p>Skelta BPM.Net 2011, Asp.net, C#.Net 4.0(Entity Data Frame work), MS SQL-2010,&nbsp;Skelta BPM.Net 2011, Asp.net, C#.Net 3.0, 3.5, Oracle 11g, Skelta BPM.Net 2009, Asp.net, JQuery, C#.Net 3.0, 3.5, Third party controls (Telerik RAD Controls), Oracle 11g.</p>
+                                    <p>Worked as Analyst where the primary responsibilities included:</p>
+                                    <ul>
+                                        <li>Involved in Requirement study.</li>
+                                        <li>Involved in Application and Module level designing.</li>
+                                        <li>Documenting the scope, estimation and feasibility study.</li>
+                                        <li>Deployment of the application.</li>
+                                        <li>Implementation of change requests and UAT support.</li>
+                                        <li>Playing mentor to juniors.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article><article data-bind="contents">
+                            <div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2006-12</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2010-10</span></span></h6></div><div class="article-body">
+                                <h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="job title">Sr Developer</span></h4><a data-bind="organization_url" target="_blank" rel="nofollow" href="http://Vadodara, Gujarat"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="organization">Rishabh Software Pvt ltd(http://www.rishabhsoft.com/)</span></h5></a><div id="react-tinymce-845610" class=" mce-content-body" spellcheck="true" placeholder="Description">
+                                    <p>Worked as Sr. Software engineer where the primary responsibilities include:</p>
+                                    <ul>
+                                        <li>Upgrading/migrating the application to new framework of .net.</li>
+                                        <li>Analyzing and providing documentation on impact analysis for new change request.</li>
+                                        <li>Implementing new change request.</li>
+                                        <li>Unit testing.</li>
+                                        <li>Coordinating with testing team.</li>
+                                        <li>Deployment of application and modules.</li>
+                                        <li>Reporting daily progress of the work carried out.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </section><section data-bind="sections" id="degrees" class="dated_story"><header><h3 class="header-text empty" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Education">Education</span></h3></header><article data-bind="contents"><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2003</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2006</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="degree name">MCA</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="school name">Sardar Patel University, VVN, Anand, Gujarat</span></h5></div><div id="react-tinymce-845611" class=" mce-content-body" spellcheck="true" placeholder="Description"></div></div></article><article data-bind="contents"><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">1999</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2002</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="degree name">B.Sc. (Computer Science)</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="school name">Sardar Patel University, VVN, Anand, Gujarat</span></h5></div><div id="react-tinymce-845612" class=" mce-content-body" spellcheck="true" placeholder="Description"></div></div></article><article data-bind="contents"><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">1997</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">1999</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="degree name">HSC</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="school name">Gujarat Secondary and Higher Secondary Education Board,Gujarat</span></h5></div><div id="react-tinymce-845613" class=" mce-content-body" spellcheck="true" placeholder="Description"></div></div></article><article data-bind="contents"><div class="article-headings"><h6 class="date-range"><span data-bind="start_date" class="empty"><span class="undefined needsclick empty" contenteditable="false" data-placeholder="YYYY"></span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">1997</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="degree name">SSC </span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="school name">Gujarat Secondary and Higher Secondary Education Board, Gujarat</span></h5></div><div id="react-tinymce-845614" class=" mce-content-body" spellcheck="true" placeholder="Description"></div></div></article></section><div data-bind="add-section-btn"><span class="undefined needsclick" contenteditable="false" data-placeholder="add-section-btn"></span></div>
+                </div>
+                <template id="dated_story">
+                    <header><h3 class="header-text" data-bind="label"></h3></header>
+                    <article data-bind="contents"><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"></span><span data-bind="end_date"></span></h6></div><div class="article-body"><h4 data-bind="title"></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"></h5></div><p data-bind="description"></p></div></article>
+                </template>
+                <template id="strengths">
+                    <header><h3 class="header-text" data-bind="label"></h3></header>
+                    <article class="competency" data-bind="contents"><div class="article-headings"><h6 data-bind="name"></h6></div><div class="article-body competency"><div data-bind="level"></div><p data-bind="description"></p></div><div class="clearfix"></div></article>
+                </template>
+                <template id="portfolio">
+                    <header><h3 class="header-text" data-bind="label"></h3></header>
+                    <article class="portfolio" data-bind="content"><div data-bind="description"><p>PortfolioDescription</p></div><div class="row gallery"><div class="asset col-sm-4" data-bind="assets"><a class="asset-thumb" data-bind="file_url" target="_blank"><div class="asset-overlay"></div><div class="css-crop bg-cover"></div></a><div target="_blank" rel="nofollow" data-bind="link_url"><label class="text-center ellipsis" data-bind="title"></label></div></div></div></article>
+                </template>
+                <template id="text_story">
+                    <header><h3 class="header-text" data-bind="label"></h3></header>
+                    <article data-bind="content"><p data-bind="description"></p></article>
+                </template>
+                <template id="chart">
+                    <header><h3 class="header-text" data-bind="label"></h3></header>
+                    <article class="chart" data-bind="content"><div class="article-headings"><h4 data-bind="title"></h4></div><div class="article-body"><p data-bind="description"></p><div class="chart-graph" data-bind="chart"></div></div></article>
+                </template>
+            </div>
+        </div>
+    </div>
+
+    <footer class="vcv-footer">
+        <p>
+            <time class="updated-at" datetime="2016-08-08T03:07:33-07:00" pubdate="pubdate">
+                August 08, 2016
+            </time>
+        </p>
+    </footer>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+   
+
+</body>
+
+</html>
